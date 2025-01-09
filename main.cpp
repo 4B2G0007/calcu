@@ -46,7 +46,7 @@ void loop() {
         inputBuffer += key;
         lcd.clear();
         lcd.print(inputBuffer);
-      } else if (key == 'A' || key == 'B' || key == 'C' || key == 'D') { // 處理運算符
+      } else if (key == 'A' || key == 'B' || key == 'C' || key == 'D') {
         if (inputBuffer.length() > 0 && inputBuffer[inputBuffer.length() - 1] >= '0' && inputBuffer[inputBuffer.length() - 1] <= '9') {
           char operatorSymbol = (key == 'A') ? '+' : (key == 'B') ? '-' : (key == 'C') ? '*' : '/';
           inputBuffer += operatorSymbol;
